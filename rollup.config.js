@@ -12,6 +12,7 @@ export default {
 	],
 	targets: [
 		{ dest: 'lib/index.cjs.js', format: 'cjs' },
-		{ dest: 'lib/index.es.js', format: 'es' }
+		{ dest: 'lib/index.es.js', format: 'es' },
+		{ dest: 'lib/index.iife.js', format: 'iife', moduleName: 'RhOnScroll' }
 	]
 };

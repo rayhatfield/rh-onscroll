@@ -14,6 +14,3 @@ clean:
 
 lib: clean
 	@rollup -c
-
-demo: lib
-	@echo "demo"
