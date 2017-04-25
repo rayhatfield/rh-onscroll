@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "Invokes a scroll callback for registered elements",
   "main": "lib/index.js",
+  "module": "lib/index.es.js",
   "files": [
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "prepublish": "npm run build"
+    "start": "rollup -c -w",
+    "prepublish": "make"
   },
   "repository": {
     "type": "git",
