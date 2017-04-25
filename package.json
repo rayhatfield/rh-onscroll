@@ -1,0 +1,38 @@
+{
+  "name": "rh-onscroll",
+  "version": "0.0.1",
+  "description": "Invokes a scroll callback for registered elements",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayhatfield/rh-onscroll.git"
+  },
+  "keywords": [
+    "onscroll",
+    "callback"
+  ],
+  "author": "ray hatfield <ray.hatfield@gmail.com> (http://rayhatfield.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayhatfield/rh-onscroll/issues"
+  },
+  "homepage": "https://github.com/rayhatfield/rh-onscroll#readme",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^3.2.2"
+  }
+}
