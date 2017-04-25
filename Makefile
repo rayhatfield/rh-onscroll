@@ -1,7 +1,6 @@
 .PHONY: clean all
 
 SRCDIR = src
-DOCSRC = $(SRCDIR)/docs
 LIBDIR = lib
 
 all: node_modules lib docs
@@ -16,7 +15,3 @@ clean:
 
 lib: clean
 	@rollup -c
-
-docs: lib
-	@rsync -rupE $(DOCSRC) .
-	@cp $(LIBDIR)/index.iife.js docs/

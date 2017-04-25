@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>rh-onscroll demo</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="index.iife.js"></script>
+	</head>
+	<body>
+		<div class="spacer">Scroll Down</div>
+		<div class="container">
+			<div class="parts">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			if (typeof RhOnScroll !== "undefined") {
+				RhOnScroll('.container', (element, percentage) => {
+					const maxOffset = 200;
+					const p = 1 - percentage;
+					element.querySelectorAll('.parts > div').forEach((child, index, {length}) => {
+						const offset = (maxOffset * p * index) - (maxOffset * p * (length - 1) / 2);
+						child.style.transform = `translateY(${offset}px) rotate(${180 * p}deg) scale(${percentage})`;
+					})
+				});
+			}
+			else {
+				console.error("RhOnScroll is not defined.");
+			}
+		</script>
+	</body>
+</html>
